@@ -1,0 +1,4 @@
+defaults:
+  - sgd
+
+lr: ${lr}

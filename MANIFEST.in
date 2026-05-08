@@ -1,0 +1,2 @@
+include geomaps/scripts/json_defaults/*.json
+include geomaps/commons/reports/jupyter_layout.html

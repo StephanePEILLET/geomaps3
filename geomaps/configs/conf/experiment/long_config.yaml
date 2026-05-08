@@ -1,0 +1,8 @@
+# @package _global_
+files:
+  output_folder: /home/dl/speillet/lightning/outputs_lightning/
+  name_exp_log: ocsge_test_32
+  version_name: version_test
+  model_filename: long_config.ckpt
+  model_out_ext: .ckpt
+  

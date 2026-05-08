@@ -1,0 +1,17 @@
+# @package _global_
+defaults:
+  - override /files: ocsge
+  - override /datamodule: ocsge
+  - override /transforms: ocsge
+  - override /loss: ocsge
+  - override /logger: ocsge
+  - override /model: ocsge
+
+trainer:
+  gpus: 1
+  max_epochs: 1
+
+lr: 0.001
+run_test: False
+run_pred: True
+profiler: null

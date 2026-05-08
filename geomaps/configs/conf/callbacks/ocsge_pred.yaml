@@ -1,0 +1,5 @@
+pred_writer:
+  _target_: geomaps.callbacks.utils.CustomPredictionWriter
+  output_dir: ${files.output_folder}/${files.name_exp_log}/predictions/${files.version_name}
+  output_type: uint8
+  write_interval: batch

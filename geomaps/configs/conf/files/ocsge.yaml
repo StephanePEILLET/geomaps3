@@ -1,0 +1,5 @@
+output_folder: /home/dl/speillet/lightning/outputs_lightning
+name_exp_log: ${now:%Y-%m-%d}
+version_name: ${now:%H-%M-%S}
+model_filename: test_hydra.ckpt
+model_out_ext: .ckpt

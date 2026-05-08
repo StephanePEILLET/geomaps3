@@ -1,0 +1,2 @@
+history_saver:
+  _target_: geomaps.callbacks.utils.HistorySaver

@@ -1,0 +1,4 @@
+csv:
+    _target_: pytorch_lightning.loggers.CSVLogger
+    save_dir: ${files.output_folder}/${files.name_exp_log}
+    version: ${files.version_name}

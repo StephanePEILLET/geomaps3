@@ -1,0 +1,11 @@
+defaults:
+  - transforms
+
+train:
+  - _target_: geomaps.data.transforms.ToDoubleTensor
+
+val:
+  - _target_: geomaps.data.transforms.ToDoubleTensor
+
+test:
+  - _target_: geomaps.data.transforms.ToDoubleTensor

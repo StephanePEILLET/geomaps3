@@ -1,0 +1,22 @@
+defaults:
+  - base_config
+  - files: default
+  - datamodule: default
+  - transforms: default
+  - optimizer: default
+  - callbacks: default
+  - model: default
+  - logger: default
+  - scheduler: default
+  - profiler: default
+  - loss: default
+  - trainer: default_gpu
+  - _self_
+
+lr: 0.001
+seed: 23
+deterministic: true
+print_config: true
+debug: true
+ignore_warnings: true
+task: TRAIN

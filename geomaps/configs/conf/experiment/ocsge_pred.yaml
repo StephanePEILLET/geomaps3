@@ -1,0 +1,18 @@
+# @package _global_
+defaults:
+  - override /files: ocsge
+  - override /datamodule: ocsge
+  - override /callbacks: ocsge_pred
+  - override /transforms: ocsge
+  - override /loss: ocsge
+  - override /logger: ocsge
+  - override /model: ocsge
+
+trainer:
+  gpus: 1
+  max_epochs: 1
+
+task: PRED
+profiler: null
+checkpoint: /home/dl/speillet/lightning/outputs_lightning/2022-04-12/ckpt_min_val_loss/18-40-21/test_hydra-epoch=00-val_loss=2.74.ckpt
+run_pred: True

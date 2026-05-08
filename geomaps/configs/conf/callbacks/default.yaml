@@ -1,0 +1,39 @@
+early_stop:
+  _target_: pytorch_lightning.callbacks.EarlyStopping
+  monitor: 'val_loss'
+  mode: min
+  patience: 30
+
+custom_ckpt:
+  _target_: geomaps.callbacks.utils.LightningCheckpoint
+  dirpath: ${files.output_folder}/${files.name_exp_log}/ckpt_${callbacks.custom_ckpt.mode}_${callbacks.custom_ckpt.monitor}
+  version: ${files.version_name}
+  filename: ${files.model_filename}
+  monitor: val_loss
+  mode: min
+  save_top_k: 3
+
+history_saver:
+  _target_: geomaps.callbacks.utils.HistorySaver
+
+tensorboard_metrics:
+  _target_: geomaps.callbacks.tensorboard.MetricsAdder
+
+tensorboard_hparams:
+  _target_: geomaps.callbacks.tensorboard.HParamsAdder
+
+tensorboard_graph:
+  _target_: geomaps.callbacks.tensorboard.GraphAdder
+
+tensorboard_histogram:
+  _target_: geomaps.callbacks.tensorboard.HistogramAdder
+
+tensorboard_predictions:
+  _target_: geomaps.callbacks.tensorboard.PredictionsAdder
+  display_bands: [1, 2, 3]
+
+pred_writer:
+  _target_: geomaps.callbacks.utils.CustomPredictionWriter
+  output_dir: ${files.output_folder}/${files.name_exp_log}/predictions/${files.version_name}
+  output_type: uint8
+  write_interval: batch
