@@ -1,10 +1,10 @@
 .. geomaps-landcover documentation master file
 
 *******************************
-Odeon-landcover's documentation
+Geomaps3's documentation
 *******************************
 
-ODEON is a PyTorch Lightning + Hydra deep-learning pipeline for semantic
+Geomaps3 is a PyTorch Lightning + Hydra deep-learning pipeline for semantic
 segmentation on aerial and satellite imagery.
 
 Installation
@@ -26,7 +26,7 @@ In order to use CUDA and NVIDIA devices, ``cudatoolkit`` must be installed too.
 Quickstart
 ==========
 
-Odeon is run through Hydra-driven CLI tasks:
+Geomaps3 is run through Hydra-driven CLI tasks:
 
 .. code-block:: console
 

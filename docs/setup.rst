@@ -21,4 +21,4 @@ Then put these lines in your script (update the path):
    export GDAL_DATA="/home/nil/anaconda3/envs/dlxx/share/gdal"
    export PROJ_LIB="/home/nil//anaconda3/envs/dlxx/share/proj/proj.db"
 
-Before playing with ODEON, launch the script.
+Before playing with Geomaps3, launch the script.

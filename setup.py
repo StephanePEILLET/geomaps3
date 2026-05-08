@@ -61,7 +61,7 @@ with open(path) as read_file:
 setup(
     name='geomaps',
     version=version,
-    author='ODEON Team',
+    author='Geomaps3 Team',
     description="PyTorch Lightning + Hydra deep-learning pipeline for semantic segmentation on aerial/satellite imagery.",
     long_description_content_type='text/markdown',
     long_description=long_description,

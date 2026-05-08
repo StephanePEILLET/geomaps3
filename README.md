@@ -1,8 +1,8 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-# ODEON Landcover
+# Geomaps3
 
-ODEON stands for Object Delineation on Earth Observations with Neural network.
+Geomaps3 stands for Object Delineation on Earth Observations with Neural network.
 It is a set of command-line tools performing semantic segmentation on remote
 sensing images (aerial and/or satellite) with as many layers as you wish.
 
@@ -40,15 +40,24 @@ pip install .
 ## Documentation
 You can find the documentation of the project at [https://dai-projets.gitlab.io/geomaps-landcover/](https://dai-projets.gitlab.io/geomaps-landcover/)
 
-## Quickstart
+## Quickstart & Usage
 
-Odeon toolkit is run through main command:
+Geomaps3 toolkit is fully driven by **Hydra**, which means you do not use JSON files anymore. You can configure and launch your training and inference pipelines natively from the command line or via YAML configurations located in `geomaps/configs/`.
+
+To launch a training task, simply use the `geomaps` command with the `task=train` argument:
+
 ```bash
-$ geomaps
-usage: geomaps [-h] -c CONFIG [-v] {sample_grid,trainer}
-geomaps: error: the following arguments are required: tool, -c/--config
+# Launch a basic training using default configuration
+geomaps task=train
+
+# Override configuration dynamically from the command line
+geomaps task=train model=deeplab datamodule.batch_size=8 trainer.max_epochs=150
+
+# Use a specific sampling file for class imbalance
+geomaps task=train datamodule.sampling_file="/path/to/weights.csv"
 ```
 
-Each tool needs a specific JSON configuration file. Available schemas can be found in `geomaps/scripts/json_defaults` folder.
+### Configuration Structure
+The project configuration relies on strict, structured Pydantic/Dataclasses ensuring type-safety. You can find the base schemas in `geomaps/configs/structured/`.
 
-More information is available in `docs` folder
+For more detailed information about models, data preparation, and training loops, please refer to the `docs/` folder or the online documentation.

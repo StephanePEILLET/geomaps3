@@ -5,7 +5,7 @@
 
 class BaseTool(object):
     """
-    Base class for the ODEON tools, callable.
+    Base class for the Geomaps3 tools, callable.
     """
 
     def __call__(self):

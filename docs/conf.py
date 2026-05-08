@@ -80,7 +80,7 @@ html_sidebars = {
 html_theme_options = {
 
     # Set the name of the project to appear in the navigation.
-    'nav_title': 'Odeon Lancover',
+    'nav_title': 'Geomaps3',
 
     # Specify a base_url used to generate sitemap.xml. If not
     # specified, then no sitemap will be built.
